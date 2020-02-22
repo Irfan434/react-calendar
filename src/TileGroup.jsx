@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 import Flex from './Flex';
 
-import { getTileClasses } from './shared/utils';
+// import { getTileClasses } from './shared/utils';
 import { tileGroupProps } from './shared/propTypes';
+// eslint-disable-next-line import/no-named-as-default
+import getCustomTileClasses from './shared/customUtils';
 
 export default function TileGroup({
   className,
@@ -28,7 +30,7 @@ export default function TileGroup({
     tiles.push(
       <Tile
         key={date.getTime()}
-        classes={getTileClasses({
+        classes={getCustomTileClasses({
           value, valueType, date, dateType, hover,
         })}
         date={date}

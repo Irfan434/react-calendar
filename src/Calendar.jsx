@@ -131,7 +131,7 @@ const isSingleValue = value => value && [].concat(value).length === 1;
 export default class Calendar extends Component {
   state = {
     /* eslint-disable react/destructuring-assignment */
-    activeStartDate: getActiveStartDate(this.props),
+    activeStartDate: new Date(), // getActiveStartDate(this.props),
     view: this.props.defaultView,
     value: this.props.defaultValue,
     /* eslint-enable react/destructuring-assignment */
