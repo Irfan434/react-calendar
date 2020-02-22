@@ -12,12 +12,9 @@ const getCustomTileClasses = ({
 } = {}) => {
   const className = 'react-calendar__tile';
   const classes = [className];
-  console.log('HHH', date);
-  console.log('JJJ', value);
   if (numMatchesInValueArray(date, value) > 0) {
     classes.push(`${className}--active`);
   }
-  // const classes = [className, 'react-calendar__tile--active'];
   return classes;
 };
 
